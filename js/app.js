@@ -56,6 +56,7 @@
   // ---- 로직 ----
   function getUnsolvedQuestions() {
     const solvedSet = new Set(state.solvedIds);
+
     return QUIZ_DATA.filter((q) => !solvedSet.has(q.id));
   }
 
@@ -89,7 +90,6 @@
     const solvedCount = state.solvedIds.length;
     const total = QUIZ_DATA.length;
     $progressText.text(`${solvedCount}/${total} 완료`);
-
     // 화면 초기화
     $resultBox.removeClass('ok no').text('');
     $explanationBox.addClass('hidden').html('');
@@ -97,7 +97,7 @@
     // 문제 텍스트
     $qNo.text(`Q${solvedCount + 1}`);
     $qText.text(q.question);
-
+    console.log('$qText::', $qText);
     if (q.passage && String(q.passage).trim() !== '') {
       $passageBox.removeClass('hidden').html(q.passage);
     } else {
@@ -219,6 +219,7 @@
     }
 
     const unsolved = getUnsolvedQuestions();
+
     if (unsolved.length === 0) {
       showEnd();
       return;
