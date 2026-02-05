@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>모바일 퀴즈</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top">
+        <h1 class="title">오늘의 퀴즈</h1>
+        <div class="meta">
+          <span id="progressText">-</span>
+          <button id="resetBtn" class="ghost">초기화</button>
+        </div>
+      </header>
+
+      <main class="card">
+        <div id="endScreen" class="hidden">
+          <h2>끝! 🎉</h2>
+          <p>모든 문제를 다 풀었어요.</p>
+          <button id="restartBtn" class="primary">처음부터 다시</button>
+        </div>
+
+        <div id="quizScreen">
+          <div class="q">
+            <div class="q-no" id="qNo">Q</div>
+            <div class="q-text" id="qText">문제</div>
+          </div>
+          <div class="passage hidden" id="passageBox"></div>
+          <div class="choices" id="choices"></div>
+
+          <div class="result" id="resultBox"></div>
+          <div class="explanation" id="explanationBox"></div>
+
+          <div class="bottom">
+            <button id="nextBtn" class="primary" disabled>다음 문제</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- data -->
+    <script src="./data.js"></script>
+
+    <!-- app -->
+    <script src="./app.js"></script>
+  </body>
+</html>
