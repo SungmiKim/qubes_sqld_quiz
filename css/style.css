@@ -9,6 +9,13 @@
   --no: #ef4444;
   --accent: #60a5fa;
 }
+.tac {
+  text-align: center !important;
+}
+
+.tal {
+  text-align: left !important;
+}
 
 * {
   box-sizing: border-box;
@@ -214,6 +221,50 @@ body {
   background: rgba(255, 255, 255, 0.02);
   color: var(--text);
   line-height: 1.5;
-  white-space: pre-wrap; /* \n 줄바꿈 살림 (text() 사용 시 특히 좋음) */
+  /* white-space: pre-wrap; */
   font-size: 15px;
+}
+.passage img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.ex-body b + table {
+  margin-top: 6px;
+}
+.ex-body table {
+  border-collapse: collapse;
+}
+.ex-body th,
+.ex-body td {
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 4px;
+  word-break: keep-all;
+}
+.ex-body th {
+  background: #243a5e; /* 딥 블루 */
+  color: #ffffff;
+}
+.ex-body ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.ex-body b + ul,
+.ex-body ul + b {
+  margin-top: 6px;
+  display: block;
+}
+
+.ex-body ul.num {
+  list-style: none;
+  padding-left: 0;
+}
+.ex-body ul.num li {
+  padding-left: 22px;
+  text-indent: -22px;
+}
+
+.ex-body ul li + li {
+  margin-top: 6px;
 }

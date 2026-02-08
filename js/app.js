@@ -82,6 +82,7 @@
   }
 
   function renderQuestion(q) {
+    console.log(q);
     currentQuestion = q;
     answered = false;
     $nextBtn.prop('disabled', true);
@@ -97,7 +98,6 @@
     // 문제 텍스트
     $qNo.text(`Q${solvedCount + 1}`);
     $qText.text(q.question);
-    console.log('$qText::', $qText);
     if (q.passage && String(q.passage).trim() !== '') {
       $passageBox.removeClass('hidden').html(q.passage);
     } else {
@@ -122,7 +122,7 @@
           <span class="label"></span>
         </button>
       `);
-      $btn.find('.label').text(c.text);
+      $btn.find('.label').html(c.text);
       $choices.append($btn);
     });
   }
