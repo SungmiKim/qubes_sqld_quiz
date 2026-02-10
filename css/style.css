@@ -136,6 +136,9 @@ body {
 .choice .label {
   line-height: 1.4;
 }
+.choice .label img {
+  max-width: 100%;
+}
 .choice.picked {
   outline: 2px solid rgba(96, 165, 250, 0.7);
 }
@@ -228,6 +231,10 @@ body {
   display: block;
   margin: auto;
   max-width: 100%;
+}
+.passage ul {
+  margin: 0;
+  padding-left: 20px;
 }
 .ex-body b + table {
   margin-top: 6px;
