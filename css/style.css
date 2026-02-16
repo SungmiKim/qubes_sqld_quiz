@@ -240,6 +240,7 @@ body {
   margin-top: 6px;
 }
 .ex-body table {
+  width: 100%;
   border-collapse: collapse;
 }
 .ex-body th,
@@ -263,7 +264,8 @@ body {
   display: block;
 }
 
-.ex-body ul.num {
+.ex-body ul.num,
+.passage ul.num {
   list-style: none;
   padding-left: 0;
 }
@@ -271,7 +273,14 @@ body {
   padding-left: 22px;
   text-indent: -22px;
 }
-
+.passage ul.num li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
 .ex-body ul li + li {
   margin-top: 6px;
+}
+
+.ex-body img {
+  max-width: 100%;
 }
