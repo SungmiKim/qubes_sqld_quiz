@@ -26,7 +26,6 @@ const QUIZ_DATA = [
     choices: ['단순화', '추상화', '명확화', '상세화'],
     answer: 4,
     explanation: '모델링의 세 가지 특징은 추상화, 단순화, 명확화이다.',
-    ㅋ,
   },
   {
     id: 'q3',
